@@ -69,7 +69,8 @@ Makefile. : Makefile
 clean:
 	rm -f *.toc *.dvi *.aux *.log *.blg *.bbl *.out *.for   \
 	      *.lof *.lol *.lot *.bcf *.run.xml *-blx.bib *.idx \
-	      *.ind *.ilg *.blg *.tdo				\
+	      *.ind *.ilg *.blg *.tdo *.synctex.gz *.fdb_latexmk\
+		  *.fls *.fmt										\
 	      *~
 
 # Wirklich alles loeschen

@@ -1,49 +1,99 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Descr:       Vorlage für Berichte der DHBW-Karlsruhe, Ein Kapitel
-%% Author:      Prof. Dr. Jürgen Vollmer, vollmer@dhbw-karlsruhe.de
-%% $Id: kapitel2.tex,v 1.5 2017/10/06 14:02:51 vollmer Exp $
-%%  -*- coding: utf-8 -*-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Deep neural networks}
 
-\chapter{Grundlagen}
-\section{abc}
-abc abc abc
-abc abc abc
-abc abc abc
-abc abc abc
-abc abc abc
+    \section{Explain the concepts of artificial neural networks and deep learning}
 
-\section{Lorem ipsum}
+        Künstliche neuronale Netze (ANN) sind algorithmische Modelle, die das biologische Verhalten von Neuronen
+        im menschlichen Gehirn nachahmen. ANNs bestehen aus vernetzten Knoten, die Informationen in mehreren
+        Schichten verarbeiten. In einem einfachen neuronalen Feed-Forward-Netzwerk fließt die Information
+        unidirektional von der Eingabeschicht zur Ausgabeschicht, wobei jede Schicht eine bestimmte Funktion
+        ausführt. ANNs können trainiert werden, um Muster und Beziehungen in den Daten durch einen Prozess zu 
+        lernen, der als überwachtes Lernen bezeichnet wird, bei dem das Netzwerk mit markierten Trainingsbeispielen
+        konfrontiert wird und seine internen Parameter anpasst, um den Fehler zwischen seiner Ausgabe und den
+        korrekten Markierungen zu minimieren.
 
-\begin{wrapfigure}{l}{0.4\textwidth}
-\centering
-\fbox{\includegraphics[width=0.25\textwidth,angle=270]{lion}}
-\end{wrapfigure}
+        Deep Learning ist ein Teilgebiet des maschinellen Lernens, das ANNs mit mehreren verborgenen Schichten
+        umfasst. Tiefe neuronale Netze (DNN) können hierarchische Darstellungen von Daten lernen, wobei jede
+        Schicht abstraktere Merkmale lernt als die vorhergehende Schicht. DNNs haben sich bei verschiedenen
+        Aufgaben als besonders leistungsfähig erwiesen, z. B. in den Bereichen maschinelles Sehen, Verarbeitung
+        natürlicher Sprache und Spracherkennung. Insbesondere DNNs mit Faltungsschichten, so genannte Convolutional
+        Neural Networks (CNNs), sind sehr effektiv für bildbezogene Aufgaben wie Bildklassifikation, Objekterkennung
+        und Bildsegmentierung.
+        
+        Der Erfolg des Deep Learning lässt sich auf mehrere Faktoren zurückführen, darunter die Verfügbarkeit großer
+        Mengen an markierten Daten, Fortschritte bei der Rechenleistung und der Parallelverarbeitung sowie
+        Verbesserungen bei Optimierungsalgorithmen wie dem stochastischen Gradientenabstieg. Deep Learning hat auch
+        zur Entwicklung neuer Techniken geführt, z. B. Transfer Learning, bei dem zuvor trainierte Modelle für
+        bestimmte Aufgaben verfeinert werden, und Generative Adversarial Networks (GANs), die realistische Bilder
+        und Videos erzeugen können.
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        Zusammenfassend lässt sich sagen, dass die Konzepte der ANN und des Deep Learning den Bereich der künstlichen
+        Intelligenz revolutioniert haben, indem sie Maschinen in die Lage versetzen, komplexe Aufgaben zu bewältigen,
+        von denen man früher glaubte, dass sie ausschließlich dem Menschen vorbehalten seien.
 
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    \section{Discuss the architecture of convolutional neural networks (CNNs) and their role in image segmentation/localization}
 
-Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+        Convolutional Neural Networks (CNNs) sind eine Art Deep Neural Networks, die den Bereich des maschinellen
+        Sehens revolutioniert haben. CNNs sind darauf ausgelegt, visuelle Eingaben wie Bilder oder Videos zu
+        analysieren und Merkmale zu extrahieren, die für eine bestimmte Aufgabe relevant sind. CNNs sind besonders
+        effektiv bei bildbezogenen Aufgaben wie Bildklassifikation, Objekterkennung und Bildsegmentierung.
 
-Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+        Die Architektur eines CNN besteht aus einer Folge von Schichten, die das Eingangsbild in ein vorhergesagtes
+        Ausgangsbild umwandeln. Die erste Schicht eines CNN ist normalerweise eine Faltungsschicht, die eine Reihe
+        von Filtern auf das Eingangsbild anwendet. Jeder Filter ist eine kleine Matrix von Gewichten, die mit dem
+        Eingabebild gefaltet werden, um lokale Merkmale zu extrahieren. Faltungsschichten können lernen,
+        grundlegende Muster wie Kanten, Ecken oder Flecken zu erkennen, die häufig in Bildern vorkommen.
+        
+        Die Ausgabe einer Faltungsschicht wird dann durch eine Aktivierungsfunktion wie ReLU oder Sigmoid geleitet,
+        die dem Modell Nichtlinearität verleiht. Die Aufgabe der Aktivierungsfunktion besteht darin, die Ausgabe
+        der Faltungsschicht in eine komplexere und aussagekräftigere Merkmalsdarstellung umzuwandeln. Diese
+        Merkmalsdarstellung wird dann durch eine Pooling-Schicht geleitet, die die räumlichen Dimensionen der
+        Merkmalskarte reduziert, während die wesentlichen Informationen erhalten bleiben. Pooling-Schichten können
+        auch eine Form von Translationsinvarianz einführen, was bedeutet, dass das Modell dasselbe Objekt unabhängig
+        von seiner Position im Bild erkennen kann.
 
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.
+        Die Ausgabe der Pooling-Schicht wird dann in einen weiteren Satz von Faltungsschichten, Aktivierungsschichten
+        und Pooling-Schichten eingespeist. Die Anzahl dieser Schichten kann je nach Komplexität der Aufgabe und Größe
+        des Datensatzes variieren. Schließlich wird die Ausgabe der letzten Pooling-Schicht abgeflacht und durch eine
+        oder mehrere vollständig verbundene Schichten geleitet, die die endgültige Klassifizierung oder Segmentierung
+        vornehmen.
 
-At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+        Bei der Bildsegmentierung können CNNs lernen, jedes Pixel eines Bildes einer bestimmten Klasse oder Kategorie
+        zuzuordnen. In der medizinischen Bildgebung können CNNs beispielsweise zur Unterscheidung von Tumoren oder
+        Läsionen von gesundem Gewebe eingesetzt werden. Die Fähigkeit von CNNs, räumliche Merkmale aus Bildern zu
+        lernen, macht sie besonders geeignet für Bildsegmentierungsaufgaben. Durch die Nutzung der räumlichen Kohärenz
+        des Bildes können CNNs hochpräzise Segmentierungen durchführen, die herkömmliche Segmentierungsmethoden
+        übertreffen.
+    
+    
 
-Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus.
+    \section{Describe the different layers of a CNN and how they are used to extract features from images}
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        Faltungsschichten sind das Herzstück von CNNs. Diese Schichten lernen, relevante Merkmale aus dem Eingabebild
+        zu extrahieren, indem sie eine Reihe von adaptiven Filtern auf das Bild anwenden. Jeder Filter gleitet über
+        das gesamte Eingabebild und führt eine elementweise Multiplikation mit anschließender Summation durch. Das
+        Ergebnis dieser Operation ist ein einzelner Skalarwert, der den Grad der Ähnlichkeit zwischen dem Filter und
+        der entsprechenden Region des Eingabebildes darstellt. Diese Skalarwerte werden dann zu einer Merkmalskarte
+        angeordnet.
 
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+        Nach jeder Faltungsschicht werden Aktivierungsschichten hinzugefügt, um dem Modell Nichtlinearität zu
+        verleihen. Ohne diese Schichten wäre das Modell auf lineare Transformationen beschränkt, die nicht
+        leistungsfähig genug sind, um komplexe nichtlineare Beziehungen in den Daten zu modellieren.
+        Aktivierungsfunktionen wie ReLU, Sigmoid und tanh werden üblicherweise in CNNs verwendet.
+        
+        Pooling-Layer werden verwendet, um die räumlichen Dimensionen der Merkmalskarten zu reduzieren, während die
+        wesentlichen Informationen erhalten bleiben. Diese Schichten unterteilen die Merkmalskarten in nicht
+        überlappende Regionen und wenden auf jede Region eine Reduktionsoperation an, wie z. B. Max- oder
+        Average-Pooling. Dadurch wird die Anzahl der Modellparameter reduziert und das Modell recheneffizienter.
 
-Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+        Voll verknüpfte Schichten werden normalerweise am Ende des CNN hinzugefügt, um das Bild zu klassifizieren oder
+        die Segmentierungsmaske vorherzusagen. Diese Schichten nehmen die abgeflachten Merkmalskarten aus den
+        vorhergehenden Schichten und lassen sie durch einen Satz vollständig verbundener Neuronen laufen, um die
+        endgültige Vorhersage zu treffen. Im Fall der Bildklassifikation stellt die Ausgabe der vollständig
+        verbundenen Schicht die Wahrscheinlichkeitsverteilung über die verschiedenen Klassen dar. Im Falle der
+        Bildsegmentierung stellt die Ausgabe der vollständig verbundenen Schicht die Wahrscheinlichkeit dar, dass
+        jedes Pixel zu dem interessierenden Objekt gehört.
 
-Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim
-placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        Insgesamt ermöglicht die Kombination dieser verschiedenen Schichten den CNNs, komplexe hierarchische
+        Repräsentationen des Eingabebildes zu erlernen, wodurch sie für Aufgaben wie Bildklassifikation,
+        Objekterkennung und Segmentierung gut geeignet sind.
+    
